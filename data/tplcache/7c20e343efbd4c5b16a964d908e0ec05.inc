@@ -1,0 +1,1 @@
+<li><a href="[field:arcurl/]">[field:title/]<span>【阅读全文】</span></a><img src="[field:beforeimg function="GetOneImgUrl(@me,1)"/]"/><img src="[field:afterimg function="GetOneImgUrl(@me,1)"/]"/></li>

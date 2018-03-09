@@ -1,0 +1,15 @@
+<section id="guahao">
+  <h2 class="tit">自助预约挂号平台</h2>
+  <form>
+    <ul>
+      <li><label>患者姓名：</label><input type="text" id="name" name="gh_name" value=""></li>
+      <li><label>联系方式：</label><input type="text" id="tel" name="gh_tel" value=""></li>
+      <li><label>就诊时间：</label><input type="text" id="time" name="gh_date" value="" onfocus="WdatePicker({dateFmt:'yyyy/MM/dd'})"></li>
+      <li><label>病情描述：</label><textarea type="text" name="gh_des" id="des" value=""></textarea></li>
+      <select id="keshi" name="gh_offices" style="display:none;">
+        <option value="发育行为科" selected="selected"></option>
+      </select>
+    </ul>
+    <div id="submit" onclick="post_order()">提交挂号</div>
+  </form>
+</section>

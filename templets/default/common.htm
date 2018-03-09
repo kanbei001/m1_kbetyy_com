@@ -1,0 +1,88 @@
+<!--banner-->
+<script src="{dede:global.cfg_templets_skin/}/js/swiper.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/swiper.min.css"/>
+<script>
+  $(function(){
+    var swiper = new Swiper('.banner .swiper-container', {
+      pagination: '.banner .swiper-pagination',
+      paginationClickable: true,
+      centeredSlides: true,
+      autoplay: 5000,
+      loop:true,
+      autoplayDisableOnInteraction: false
+    });
+  })
+</script>
+
+<!--预约挂号-->
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/DatePicker/WdatePicker.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/kangbei_order.js"></script>
+
+<style>
+/*common*/
+.wrap{padding-bottom:6rem;}
+.fixed_bottom{width:100%; min-width:320px; position:fixed; bottom:0; left:0; z-index:100; font-size:16px; z-index:100;}
+.fixed_bottom img{width:100%; display:block;}
+.fixed_bottom ul{width:100%; height:100%; position:absolute; top:0; left:0;}
+.fixed_bottom li{float:left; width:26%; height:100%; text-align:center;}
+.fixed_bottom li.tel{width:48%; text-align:left;}
+.fixed_bottom li a{display:block; width:100%; color:#fff; font-size:1.2rem;}
+.fixed_bottom li p{padding:40% 0 0;}
+.fixed_bottom li.tel p{padding:7% 0 0 30%;}
+.fixed_bottom li.tel b{font-size:1.4rem;}
+
+@media all and (min-width: 640px) {
+  .fixed_bottom{max-width:640px; margin-left:-320px; left:50%;}
+}
+</style>
+<!--底部浮窗-->
+<section class="fixed_bottom">
+  <img src="{dede:global.cfg_templets_skin/}/images/bottom_img.jpg"/>
+  <ul>
+    <li class="home"><a href="/"><p>回到首页</p></a></li>
+    <li class="tel"><a href="tel:075525111120"><p>电话问诊<br/><b>0755-25111120</b></p></a></li>
+    <li class="zixun"><a href="javascript:onKST();"><p>在线咨询</p></a></li>
+  </ul>
+</section>
+
+<!--中间弹窗-->
+<style>
+.ksttc{width:282px; height:266px; position:fixed; top:50%; left:50%; margin-top:-133px; margin-left:-141px; display:none; z-index:500; background:url({dede:global.cfg_templets_skin/}/images/mswt.png) no-repeat center;}
+.ksttc p{width:30px; height:30px; position:absolute; top:83px; right:0; cursor:pointer;}
+.ksttc span{width:100%; position:absolute; top:153px; display:block; color:#fff; text-align:center; font-size:16px;}
+.ksttc a{display:block; width:97px; height:32px; line-height:32px; text-align:center; position:absolute; bottom:16px; border:1px solid #FF8400; border-radius:6px; font-size:16px;}
+.ksttc a.zixun{left:22px; color:#FF8400;}
+.ksttc a.guahao{right:32px; color:#fff; background:#FF8400;}
+</style>
+<div class="ksttc">
+  <p></p>
+  <span>为儿童提供优质医疗服务</span>
+  <a class="zixun" rel="nofollow" href="javascript:onKST();">在线咨询</a>
+  <a class="guahao" rel="nofollow" href="javascript:onKST();">预约挂号</a>
+</div>
+<script>
+var ksttc_timeout = setTimeout(ksttc_show, 8000);
+function ksttc_show(){
+  var url = window.location.href;
+  if(url.indexOf("noswt") < 0){
+    $(".ksttc").fadeIn(300);
+  }
+}
+function ksttc_hide(){
+  $(".ksttc").fadeOut(300);
+}
+$(".ksttc p").click(function(){
+  ksttc_hide();
+  ksttc_timeout = setTimeout(ksttc_show, 12000);
+})
+</script>
+
+<!--快商通-->
+<script src="http://www.kbetyy.com/templets/kangbei/js/onKST.js"></script>
+<script type="text/javascript" src="https://rgtk15.kuaishang.cn/bs/ks.j?cI=198926&fI=115319" charset="utf-8"></script>
+
+<script>
+window.setInterval(function(){
+  $("#_embed_v3_dc").hide();
+},100)
+</script>

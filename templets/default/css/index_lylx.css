@@ -1,0 +1,14 @@
+.position{background:#fff; font-size:1.2rem; color:#555; padding:2rem 1rem;}
+.position a{color:#555; vertical-align:middle;}
+.position img{vertical-align:middle; margin-right:5px;}
+
+.con2{background:#FF6060; padding:0 1rem 2rem;}
+.con2 h2{color:#fff; font-size:1.5rem; text-align:center; padding:1.5rem 0;}
+.con2 td{background:#fff; text-align:center;}
+.con2 a{color:#666; font-size:1.1rem; display:block; padding:1rem 0;}
+
+.lylx{background:#fff; padding:0 1.2rem;}
+.lylx img{width:100%; display:block;}
+.lylx .con{padding:3rem 1.2rem;}
+.lylx .con p{margin:1rem 0; color:#666;}
+.lylx .con p span{color:#FF5104;}

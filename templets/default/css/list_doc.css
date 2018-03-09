@@ -1,0 +1,21 @@
+.telbtn{background:#FF961A; padding:0.6rem 1rem; overflow:hidden;}
+.telbtn a{display:block; height:100%; font-size:1rem; border-radius:3rem; padding:0.6rem 0;}
+.telbtn a.swt{float:left; width:45%; color:#FF961A; background:#fff; border:1px solid #fff;}
+.telbtn a.tel{float:right; width:50%; color:#fff; border:1px solid #fff;}
+.telbtn a img{vertical-align:middle; margin:0 0.6rem 0 1rem;}
+.telbtn a span{vertical-align:middle;}
+
+.artlist_doc ul{padding:0 1.2rem; background:#fff;}
+.artlist_doc li .t{overflow:hidden; border:1px solid #E1E1E1;}
+.artlist_doc li .img{width:40%; height:15rem; float:left; overflow:hidden; border-right:1px solid #E1E1E1;}
+.artlist_doc li .img a{display:block; width:100%; height:100%;}
+.artlist_doc li .info{width:calc(60% - 1px); height:15rem; float:left;}
+.artlist_doc li .info h3{color:#26A3E7; font-size:1.6rem; font-weight:bold; margin:1rem;}
+.artlist_doc li .info h3 span{font-size:1.1rem; font-weight:normal;}
+.artlist_doc li .info h4{background:#26A3E7; color:#fff; display:inline-block; font-size:1.3rem; padding:0.3rem 0.8rem; margin:0 1.5rem;}
+.artlist_doc li .info p{margin:1rem 1.2rem; color:#666; font-size:1.1rem; height:7.2rem; line-height:1.8rem; overflow:hidden;}
+.artlist_doc li .btn{text-align:center; padding:2rem 0;}
+.artlist_doc li .btn a{display:inline-block; color:#fff; font-size:1.2rem; padding:0.8rem 2rem; border-radius:2rem; margin-right:2rem;}
+.artlist_doc li .btn a.a1{background:#26A3E7;}
+.artlist_doc li .btn a.a2{background:#FF8C47;}
+.artlist_doc li .btn a.a3{background:#5490FF; margin:0;}

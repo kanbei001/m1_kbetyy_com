@@ -1,0 +1,9 @@
+.artlist_xjsb ul{padding:0 1.2rem; background:#fff;}
+.artlist_xjsb li{overflow:hidden; border:1px solid #E1E1E1;}
+.artlist_xjsb li .img{width:45%; float:left; overflow:hidden;}
+.artlist_xjsb li .img img{width:100%; display:block;}
+.artlist_xjsb ul{padding-bottom:3rem;}
+.artlist_xjsb li .info{width:calc(55% - 1px); float:left; border-left:1px solid #E1E1E1; margin:0.6rem 0;}
+.artlist_xjsb li .info h3{color:#666; font-size:1.6rem; margin:1rem 1.5rem;}
+.artlist_xjsb li .info p{margin:1.5rem; color:#666; font-size:1.1rem; height:5.4rem; line-height:1.8rem; overflow:hidden;}
+.artlist_xjsb li .info p a{color:#666;}

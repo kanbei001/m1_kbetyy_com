@@ -1,0 +1,171 @@
+        <h1 class="questionnaire_name"></h1>
+        <form action="javascript:" class="form" style="display:none">
+            <div class="user_detail">
+                姓名：<input type="text" name="client"><span class="client"></span></br>
+                电话：<input type="text" name="phone"><span class="phone"></span></br>
+                邮箱：<input type="text" name="email"><span class="email"></span>
+            </div>
+            <div class="questions"></div>
+            <div class="submit"><input type="submit" value="提交"></div>
+        </form>
+        <div class="report"></div>
+
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" ></script>
+    <script>
+        /**
+         * 请求问卷
+         * @receive json
+         */
+         $.ajax({
+             type:'POST',
+             url:'/plus/questionnaire.php/quesinnaire_list',
+             data:{form:'开发测试卷1'},//输入对应的卷名，请求对应的题卷
+             success:function(data) {
+                 try {
+                     var data = JSON.parse(data); //尝试转数组
+                 } catch(err) {
+
+                 }
+                 console.log(data);
+                 if(data['error'] == 1) { //数据请求成功
+                     $('.questionnaire_name').text(data['questionnaire']['name']); //卷名
+                    var num = 1;
+                    for(var i in data['questions']) {
+                       if(data['questions'][i]['type'] == 'choose') { //选择题
+                            $(".questions").append(//描述
+                                num+','+data['questions'][i]['description']+"<br>"
+                            );
+                            for(var ini in data['questions'][i]['content']) {//选项
+                                $(".questions").append(
+                                    "<input type='checkbox' value='choose' name='"+data['questions'][i]['content'][ini][0]+"'>"+data['questions'][i]['content'][ini][1]
+                                );
+                            }
+                           $(".questions").append(
+                               "<br>"
+                           );
+                       }
+                        if(data['questions'][i]['type'] == 'write') { //自答题
+                            $('.questions').append(
+                                    num+','+data['questions'][i]['description']+"<br>" //描述
+                                +   "<textarea name='"+data['questions'][i]['content'][0]+"'></textarea>" //文本域
+                                +   "<br>"
+                            );
+                        }
+                        num++;
+                    }
+                    $('.form').css('display','block');
+
+                 }
+
+                 if(data['error'] == 0) { //数据请求失败
+                     alert(1);
+                     alert(data['error_det']); //错误信息
+                 }
+             }
+         });
+        /**
+         * 提交数据
+         * @access ajax
+         * @aceipt json|obj
+         */
+        $('.submit').click(function(){
+            var str = $('input[name=client]').val() == ''?'姓名':'';
+             str  += $('input[name=phone]').val() == ''?'手机号码':'';
+             str  += $('input[name=email]').val() == ''?'邮箱':'';
+            if(str != '') {
+                alert('请输入'+str);
+                return;
+            }
+            var data = $('form').serializeArray();
+            postData = {};
+            $(data).each(function(i) {
+                postData[this.name] = this.value;
+            });
+            console.log(postData);
+            $.ajax({
+                type:'POST',
+                url:'/plus/questionnaire.php/receive',
+                data:postData,
+                success:function(data) {
+                    try {
+                        var data = JSON.parse(data); //尝试转数组
+                    } catch(err) {
+
+                    }
+                    console.log(data);
+                    if(data['report_status'] == 1) { //返回数据成功，开始打印报告
+                        $('.report').css('display','block');
+                        $('.report').empty();
+                        $('.report').append(
+                            "<p>总题数:"+data['report_all_questions']+"</p>"
+                            +	"<p>选择题数:"+data['report_choose_questions']+"</p>"
+                            +	"<p>总选择数"+data['report_choose_sub']+"</p>"
+                            +	"<p>填写题数:"+data['report_write_questions']+"</p>"
+                            +	"<p>计算结果:</p>"
+                        );
+                        for(var i in data['report_choose_del']) {
+                            $('.report').append(
+                                "&nbsp &nbsp"
+                                +	data['report_choose_del'][i]
+                                +	"<br>"
+                            );
+                        }
+                        $('.report').append(
+                            "符合情况"
+                        );
+                        for(var i in data['advice']){
+                            $('.report').append(
+                                "&nbsp &nbsp"
+                                +	data['advice'][i]
+                                +	"<br>"
+                            );
+                        }
+                        //如果有填写题,用户不有提交联系方式就提醒。如果不有就不提醒
+                        if(data['parameter_status'] == 1){
+                            $('.report').append(
+                                "<p>提示:"+data['parameter_detail']+"</p>"
+                            );
+                        }else{
+                            $('.report').append(
+                                "<p>提示:医生会在3小时内回复您的问题，请注意查收邮件</p>"
+                            );
+                        }
+                        $('.report').append(
+                            '<a href="'+data['url']+'" >下载pdf格式</a>'
+                        );
+                    }
+                    if(data['error'] == 0) {
+                        alert(data['error_det']);
+                    }
+                }
+            });
+
+        });
+
+        /**
+         * 格式判断
+         */
+        $('input[type=text]').blur(function(){
+            var name  = $(this).attr('name');
+            var value = $(this).val();
+            switch(name) {
+                case 'client':
+                    value==''?$('.client').text('请办输入姓名'):$('.client').text('');
+                    ;break;
+                case 'email':
+                    if(!(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/.test(value))) {
+                        $('.email').text('邮箱格式不规范！');
+                        return;
+                    }
+                    $('.email').text('');
+                    break;
+                case 'phone':
+                    if(!(/^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|17[0-9]|18[0|1|2|3|5|6|7|8|9])\d{8}$/.test(value))){
+                        $('.phone').text('手机号码不规范');
+                        return;
+                    }
+                    $('.phone').text('');
+                    break;
+            }
+        })
+    </script>

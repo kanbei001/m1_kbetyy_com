@@ -1,0 +1,40 @@
+<?php
+$z[0]=Array("field","",402,424);
+$z[0][4]['name']="typename";
+$z[1]=Array("global","",427,453);
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("field","",498,520);
+$z[2][4]['name']="keywords";
+$z[3]=Array("field","",563,588);
+$z[3][4]['name']="description";
+$z[4]=Array("global","",642,674);
+$z[4][4]['name']="cfg_templets_skin";
+$z[5]=Array("global","",742,774);
+$z[5][4]['name']="cfg_templets_skin";
+$z[6]=Array("global","",841,873);
+$z[6][4]['name']="cfg_templets_skin";
+$z[7]=Array("include","",951,988);
+$z[7][4]['filename']="header.htm";
+$z[8]=Array("include","",996,1033);
+$z[8][4]['filename']="banner.htm";
+$z[9]=Array("global","",1087,1119);
+$z[9][4]['name']="cfg_templets_skin";
+$z[10]=Array("field","\r\n        \$a=mb_strlen(@me);\r\n        @me=cn_substr(@me,\$a-4);\r\n        ",1142,1268);
+$z[10][4]['name']="position";
+$z[10][4]['runphp']="yes";
+$z[11]=Array("channelartlist","\r\n          <li class=\"t{dede:field.typeid/}\"><a href=\"{dede:field.typeurl/}\">{dede:field.typename/}案例</a></li>\r\n          ",1344,1536);
+$z[11][4]['typeid']="4";
+$z[11][4]['type']="son";
+$z[12]=Array("list","\r\n          <li>\r\n            <div class=\"before\">\r\n              <a href=\"[field:arcurl/]\"><img src=\"[field:beforeimg function=\"GetOneImgUrl(@me,1)\"/]\"/></a>\r\n              <h3>治疗前</h3>\r\n              <p>[field:beforedes/]</p>\r\n            </div>\r\n            <div class=\"after\">\r\n              <a href=\"[field:arcurl/]\"><img src=\"[field:beforeimg function=\"GetOneImgUrl(@me,1)\"/]\"/></a>\r\n              <h3>治疗后</h3>\r\n              <p>[field:afterdes/]</p>\r\n            </div>\r\n            <div class=\"btn\">\r\n              <img src=\"[field:global.cfg_templets_skin/]/images/anli_btn.jpg\"/>\r\n              <a href=\"javascript:onKST();\" class=\"swt\"></a>\r\n              <a href=\"tel:075525111120\" class=\"tel\"></a>\r\n            </div>\r\n          </li>\r\n          ",1633,2440);
+$z[12][4]['pagesize']="4";
+$z[13]=Array("pagelist","",2521,2587);
+$z[13][4]['listitem']="index,end,pre,next,pageno";
+$z[13][4]['listsize']="1";
+$z[14]=Array("include","",3358,3401);
+$z[14][4]['filename']="common_order.htm";
+$z[15]=Array("include","",3409,3446);
+$z[15][4]['filename']="footer.htm";
+$z[16]=Array("field","",3504,3524);
+$z[16][4]['name']="typeid";
+
+?>

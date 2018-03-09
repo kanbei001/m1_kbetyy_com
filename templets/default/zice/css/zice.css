@@ -1,0 +1,43 @@
+.kslist{padding:2rem 1.2rem; text-align:center; background:#fff;}
+.kslist h1{color:#34C2B2; font-size:1.6rem; font-weight:bold; padding:0 0 2rem;}
+.kslist ul{overflow:hidden;}
+.kslist li{float:left; width:calc(32% - 2px); margin:0 2% 2% 0; border:1px solid #e1e1e1; border-radius:0.3rem;}
+.kslist li:nth-child(3n){margin:0 0 2% 0;}
+.kslist li.cur{background:#34C2B2; border-color:#34C2B2;}
+.kslist li a{color:#666; font-size:1.1rem; line-height:3rem;}
+.kslist li.cur a{color:#fff;}
+
+.order{background:#fff; padding:0 1rem 1rem; font-size:1rem;}
+.order ul{margin:0 1rem;}
+.order li{padding:1rem 0; line-height:2rem; color:#666;}
+.order span{margin:0 3rem 0 0.5rem;}
+.order .hide{display:none;}
+.btn{background:#FF9813; border-radius:2rem; padding:0.3rem 0.3rem 0.3rem 2rem; overflow:hidden; margin:3rem 2rem; line-height:3.6rem; font-size:1.1rem; position:relative;}
+.btn input{background:none; border:none; outline:none; width:70%; color:#fff; font-size:1.1rem;}
+.btn span{color:#FF9813; background:#fff; border-radius:2rem; display:block; margin:0; padding:0 1.2rem; position:absolute; top:0.3rem; right:0.3rem;}
+::-webkit-input-placeholder{color:#fff;}
+::-moz-placeholder{color:#fff;}
+::-moz-placeholder{color:#fff;}
+::-ms-input-placeholder{color:#fff;}
+
+.con2{background:#FF6060; padding:0 1rem 2rem;}
+.con2 h2{color:#fff; font-size:1.5rem; text-align:center; padding:1.5rem 0;}
+.con2 td{background:#fff; text-align:center;}
+.con2 a{color:#666; font-size:1.1rem; display:block; padding:1rem 0;}
+
+/*抽动症*/  /*学习困难*/
+.order_cdz li, .order_xxkn li{border-bottom:1px solid #e1e1e1;}
+
+/*多动症*/
+.order_ddz h3{background:#34C2B2; color:#fff; display:inline-block; margin:2rem 1rem; padding:0.5rem 1.2rem;}
+.order_ddz li{padding:0.6rem 0;}
+
+/*语言障碍*/
+h1.tip{color:#34C2B2; background:#fff; font-size:1.6rem; font-weight:bold; text-align:center;}
+.order_yyza .item{padding:1px;}
+.order_yyza h3{overflow:hidden; margin:2rem 1rem 0;}
+.order_yyza h3 span{background:#34C2B2; color:#fff; display:block; margin:0; padding:0.5rem 1.2rem; float:left;}
+.order_yyza h3 img{display:block; float:right; height:2rem; margin-top:0.25rem;}
+.order_yyza ul.sl{margin-top:1rem; background:#f1f1f1; padding:1rem; display:none;}
+.order_yyza li{border-bottom:1px solid #e1e1e1;}
+.order_yyza li:nth-last-child(1){border:none;}

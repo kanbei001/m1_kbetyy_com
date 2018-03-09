@@ -1,0 +1,57 @@
+*{margin:0; padding:0; font-family:"Microsoft Yahei";}
+a{text-decoration:none;}
+li{list-style:none;}
+input, select, textarea, button{outline:none;}
+h1, h2, h3, h4, h5, h6{font-weight:normal;}
+
+@media all and (max-width:640px) {
+  html{font-size:16px;}
+}
+@media all and (max-width:560px) {
+  html{font-size:13px;}
+}
+@media all and (max-width:480px) {
+  html{font-size:10px;}
+}
+
+.wrap{width:640px; min-width:320px; margin:auto; overflow:hidden; background:#F1F1F1;}
+@media all and (max-width: 640px) {
+  .wrap{width:100%;}
+}
+
+.top{text-align:center; background:#45B70F url(../images/logo.png) no-repeat center/auto 90%; overflow:hidden;}
+.top a{display:inline-block; vertical-align:middle;}
+.top a.top_home{float:left; margin:1rem;}
+.top a.top_tel{float:right; margin:1rem;}
+.top img{display:block; height:3rem;}
+
+.banner img{width:100%; display:block;}
+
+nav{background:#fff; padding:1rem 0;}
+nav ul{overflow:hidden; margin:auto; width:90%;}
+nav li{width:14.28%; margin-right:14.28%; float:left;}
+nav li:nth-child(4n){margin-right:0;}
+nav li img{width:100%; display:block;}
+nav li p{text-align:center; color:#555; margin:1rem 0;}
+
+h2.tit{font-size:2rem; color:#3797FD; text-align:center; padding:2.5rem 0; font-weight:bold;}
+
+/*order*/
+#guahao{padding:0 1.2rem 3rem; text-align:center; background:#fff;}
+#guahao ul{margin:0 2rem 2rem;}
+#guahao ul li{overflow:hidden; color:#555; font-size:1.2rem; line-height:3rem; margin-bottom:1.8rem;}
+#guahao label{width:25%; display:block; float:left;}
+#guahao input, #guahao textarea{border:none; outline:none; background:#f8f8f8; width:74%; height:3rem; display:block; float:right; border:1px solid #ccc; font-size:1.3rem; line-height:3rem; color:#888; text-indent:0.6rem;}
+#guahao input:focus, #guahao textarea:focus{background:#fff;}
+#guahao textarea{height:6rem; resize:none;}
+#submit{background:#FF8416; color:#fff; margin-left:25%; display:inline-block; font-size:1.3rem; padding:0.6rem 3rem; border-radius:2rem;}
+
+/*footer*/
+footer{padding:2rem 1.5rem; overflow:hidden; background:#fff; margin-top:0.5rem;}
+footer .weixin{width:10rem; float:left; max-width:calc(35% - 1.5rem);}
+footer .weixin img{width:100%; display:block;}
+footer .weixin p{color:#555; text-align:center;}
+footer .footer_info{float:left; line-height:2rem; width:65%; margin-left:1.5rem;}
+footer .footer_info p{font-size:1.3rem; color:#555; margin:1rem 0;}
+footer .footer_info p a{color:#555;}
+footer .footer_info p.addr a{font-size:1rem; color:#FF8416;}

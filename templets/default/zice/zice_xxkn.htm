@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0,user-scalable=no"/>
+    <title>学习困难自测 - {dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:field.keywords/}"/>
+    <meta name="description" content="{dede:field.description/}"/>
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/zice/css/zice.css"/>
+  </head>
+  <body>
+    <section class="wrap">
+      {dede:include filename="header.htm"/}
+      <section class="banner">
+        <a href="javascript:onKST();"><img src="{dede:global.cfg_templets_skin/}/zice/images/banner_zice.jpg"></a>
+      </section>
+      <section class="kslist">
+        <h1>请选择您想了解的病种进行测试</h1>
+        <ul>
+          <li><a href="/special/ddzzc.html">多动症自测</a></li>
+          <li><a href="/special/cdzzc.html">抽动症自测</a></li>
+          <li><a href="/special/zbzzc.html">自闭症自测</a></li>
+          <li><a href="/special/ynzzc.html">遗尿症自测</a></li>
+          <li><a href="/special/yyzazc.html">语言障碍自测</a></li>
+          <li class="cur"><a href="/special/xxknzc.html">学习困难自测</a></li>
+        </ul>
+      </section>
+      <section class="order order_xxkn">
+        <ul>
+          <li>
+            <p>1、语言理解和语言表达不良，有的即使能说出少许单词，但构音明显困难</p>
+            <label><input type="radio" name="radio1" value="是"/><span>是</span></label>
+            <label><input type="radio" name="radio1" value="偶尔"/><span>偶尔</span></label>
+            <label><input type="radio" name="radio1" value="否"/><span>否</span></label>
+          </li>
+          <li>
+            <p>2、常表现“听而不闻”，不理睬父母或老师的讲话，易被视为不懂礼貌</p>
+            <label><input type="radio" name="radio2" value="是"/><span>是</span></label>
+            <label><input type="radio" name="radio2" value="偶尔"/><span>偶尔</span></label>
+            <label><input type="radio" name="radio2" value="否"/><span>否</span></label>
+          </li>
+          <li>
+            <p>3、会说话较迟，开始说话常省略辅音，语句里少用关系词</p>
+            <label><input type="radio" name="radio3" value="是"/><span>是</span></label>
+            <label><input type="radio" name="radio3" value="否"/><span>否</span></label>
+          </li>
+          <li>
+            <p>4、读字遗漏或增字、阅读时出现“语塞”或太急、字节顺序混乱</p>
+            <label><input type="radio" name="radio4" value="是"/><span>是</span></label>
+            <label><input type="radio" name="radio4" value="否"/><span>否</span></label>
+          </li>
+          <li>
+            <p>5、顺序和左右认知困难，计算和书写困难</p>
+            <label><input type="radio" name="radio5" value="是"/><span>是</span></label>
+            <label><input type="radio" name="radio5" value="否"/><span>否</span></label>
+          </li>
+          <li>
+            <p>6、缺乏主动书写，握持笔困难、写字丢偏旁部首或涂抹过多，错别字多</p>
+            <label><input type="radio" name="radio6" value="是"/><span>是</span></label>
+            <label><input type="radio" name="radio6" value="否"/><span>否</span></label>
+          </li>
+          <li>
+            <p>7、多伴有多动、冲动、注意集中困难</p>
+            <label><input type="radio" name="radio7" value="是"/><span>是</span></label>
+            <label><input type="radio" name="radio7" value="否"/><span>否</span></label>
+          </li>
+          <li>
+            <p>8、智力测验多表现结构不平衡，语言之上和操作之上分值差异大</p>
+            <label><input type="radio" name="radio8" value="是"/><span>是</span></label>
+            <label><input type="radio" name="radio8" value="否"/><span>否</span></label>
+          </li>
+          <li>
+            <p>9、有类似口吃表现、语调缺乏抑扬、说话伴身体摇晃、形体语言偏多等</p>
+            <label><input type="radio" name="radio9" value="是"/><span>是</span></label>
+            <label><input type="radio" name="radio9" value="否"/><span>否</span></label>
+          </li>
+        </ul>
+        <input type="hidden" id="name" value="学习困难自测"/>
+        <input type="hidden" id="time" value="　"/>
+        <select id="keshi" style="display:none;">
+          <option value="学习困难" selected="selected"></option>
+        </select>
+        <input type="hidden" id="des" value="　"/>
+        <div class="btn"><input type="text" id="tel" value="" placeholder="请输入您的手机号码，接收测试结果"/><span id="zice_submit" onclick="post_order2()">点击提交结果</span></div>
+      </section>
+      <section class="con2">
+        <h2>大家都在了解</h2>
+        <table cellspacing="4" width="100%">
+          <tr>
+            <td><a href="javascript:onKST();">自闭症会不会有自残的行为</a></td>
+            <td class="b"><a href="javascript:onKST();">怎么分清孩子好动还是多动症</a></td>
+          </tr>
+          <tr>
+            <td colspan="2"><a href="javascript:onKST();">孩子是摇头晃脑的是不是抽动症</a></td>
+          </tr>
+          <tr>
+            <td class="b"><a href="javascript:onKST();">孩子学习很差怎么办</a></td>
+            <td><a href="javascript:onKST();">小孩3岁了还不会说话</a></td>
+          </tr>
+        </table>
+      </section>
+      {dede:include filename="footer.htm"/}
+    </section>
+  </body>
+<!--自测表单-->
+<script>
+var msgw = $(window).width()-100;//提示窗宽度
+function post_order2(){
+	var gh_name = $("#name");//姓名
+	var gh_tel = $("#tel");//电话
+	var gh_date = $("#time");//时间
+	var gh_offices = $("#keshi option:selected");//科室
+	//描述
+	var gh_des = "1、语言理解和语言表达不良，有的即使能说出少许单词，但构音明显困难？答："+
+	$("input[name='radio1']:checked").val()+
+	"；2、常表现“听而不闻”，不理睬父母或老师的讲话，易被视为不懂礼貌？答："+
+	$("input[name='radio2']:checked").val()+
+	"；3、会说话较迟，开始说话常省略辅音，语句里少用关系词？答："+
+	$("input[name='radio3']:checked").val()+
+	"；4、读字遗漏或增字、阅读时出现“语塞”或太急、字节顺序混乱？答："+
+	$("input[name='radio4']:checked").val()+
+	"；5、顺序和左右认知困难，计算和书写困难？答："+
+	$("input[name='radio5']:checked").val()+
+	"；6、缺乏主动书写，握持笔困难、写字丢偏旁部首或涂抹过多，错别字多？答："+
+	$("input[name='radio6']:checked").val()+
+	"；7、多伴有多动、冲动、注意集中困难？答："+
+	$("input[name='radio7']:checked").val()+
+	"；8、智力测验多表现结构不平衡，语言之上和操作之上分值差异大？答："+
+	$("input[name='radio8']:checked").val()+
+	"；9、有类似口吃表现、语调缺乏抑扬、说话伴身体摇晃、形体语言偏多等？答："+
+	$("input[name='radio9']:checked").val();
+	
+  if($("input[name='radio1']:checked").val()==null){
+    showMsg('问题1未选择答案！',2000);
+    $("input[name='radio1']").focus();
+    return false;
+  }
+  if($("input[name='radio2']:checked").val()==null){
+    showMsg('问题2未选择答案！',2000);
+    $("input[name='radio2']").focus();
+    return false;
+  }
+  if($("input[name='radio3']:checked").val()==null){
+    showMsg('问题3未选择答案！',2000);
+    $("input[name='radio3']").focus();
+    return false;
+  }
+  if($("input[name='radio4']:checked").val()==null){
+    showMsg('问题4未选择答案！',2000);
+    $("input[name='radio4']").focus();
+    return false;
+  }
+  if($("input[name='radio5']:checked").val()==null){
+    showMsg('问题5未选择答案！',2000);
+    $("input[name='radio5']").focus();
+    return false;
+  }
+  if($("input[name='radio6']:checked").val()==null){
+    showMsg('问题6未选择答案！',2000);
+    $("input[name='radio6']").focus();
+    return false;
+  }
+  if($("input[name='radio7']:checked").val()==null){
+    showMsg('问题7未选择答案！',2000);
+    $("input[name='radio7']").focus();
+    return false;
+  }
+  if($("input[name='radio8']:checked").val()==null){
+    showMsg('问题8未选择答案！',2000);
+    $("input[name='radio8']").focus();
+    return false;
+  }
+  if($("input[name='radio9']:checked").val()==null){
+    showMsg('问题9未选择答案！',2000);
+    $("input[name='radio9']").focus();
+    return false;
+  }
+	
+	tel_re = /^(1\d{10}|((010|02\d|0[3-9]\d{2})-?)?([1-9]\d{6,7}))$/;
+	if(gh_name.length>0 &&gh_name.val() ==""){
+		showMsg('姓名不能为空！',2000);
+		gh_name.focus();
+		return false;
+	}
+	if(gh_tel.length>0 &&gh_tel.val() ==""){
+		showMsg('联系电话不能为空！',2000);
+		gh_tel.focus();
+		return false;
+	}
+	if(!tel_re.test(gh_tel.val())) {
+    showMsg('联系电话格式不正确，请输入11位手机号码！',2000);
+    gh_tel.focus();
+		return false;
+    }
+	if(gh_offices.length>0 &&gh_offices.val() =="0"){
+		showMsg('请选择科室！',2000);
+    gh_offices.focus();
+		return false;
+	}
+	if(gh_date.length>0 &&gh_date.val() ==""  ){
+		showMsg('请选择您的预约时间！',2000);
+    gh_date.focus();
+		return false;
+	}
+  var data = new Array();
+  var weburl = window.location.href;
+  var sourceUrl = weburl.split("//")[1];
+  data["sourceUrl"] = sourceUrl;
+  data["k"] = 1;
+  data["name"] = gh_name.val();
+  data["phone"] = gh_tel.val();
+  data["keshi"] = gh_offices.val();
+  data["time"]  = gh_date.val();
+  data["bingzheng"] = gh_des;
+  var jsondata = {name:data["name"],phone:data["phone"],keshi:data["keshi"],time:data['time'],bingzheng:data["bingzheng"],k:data["k"],sourceUrl:data["sourceUrl"]};
+  url = '/plus/API.php';
+  $.post(url,jsondata, function(result) {
+      var result = JSON.parse(result);
+      if(result.status==1) {
+        showMsg("您的测试已提交成功！<br/><br/>我们将会在24小时内致电通知您测试结果，请您注意<br/>0755-25111120 的来电！",null,msgw);
+      }else{
+        showMsg("提交失败，请拨打电话0755-25111120进行预约。");
+      }
+  });
+}
+</script>
+</html>

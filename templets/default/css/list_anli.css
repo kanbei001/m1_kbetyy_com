@@ -1,0 +1,19 @@
+.kslist{background:#fff; padding:0 1.2rem 3rem;}
+.kslist ul{overflow:hidden;}
+.kslist li{width:calc(33.33% - 2px); border:1px solid #e1e1e1; float:left;}
+.kslist .cur{background:#27A3E7; border-color:#27A3E7;}
+.kslist li a{text-align:center; color:#666; display:block; line-height:3rem; font-size:1.3rem;}
+.kslist .cur a{color:#fff}
+
+.artlist_anli{background:#fff;}
+.artlist_anli li{overflow:hidden; margin:0 1.2rem;}
+.artlist_anli .before{float:left; width:48%; border:1px solid #e1e1e1;}
+.artlist_anli .after{float:right; width:48%; border:1px solid #e1e1e1;}
+.artlist_anli li img{width:100%; height:12rem; display:block;}
+.artlist_anli li h3{font-size:1.3rem; font-weight:bold; color:#666; text-align:center; margin:1rem 0 0.6rem}
+.artlist_anli li .after h3{color:#27A3E7;}
+.artlist_anli li p{color:#666; font-size:1.1rem; line-height:1.8rem; margin:0 1rem 1rem;}
+.artlist_anli .btn{clear:both; padding:3rem 0; overflow:hidden;}
+.artlist_anli .btn a{display:block; height:100%; font-size:1.2rem; padding:0.8rem 2rem; border-radius:3rem; border:1px solid #FF961A; margin:0 1.2rem;}
+.artlist_anli .btn a.swt{float:left; background:#FF961A; color:#fff;}
+.artlist_anli .btn a.tel{float:right; color:#FF961A;}
